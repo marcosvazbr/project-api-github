@@ -20,7 +20,6 @@ class WorkWithData {
       return data} else { throw "" + "\n" + "ERRO!!!" + "\n \n" + "Usuário " + inputUser + " não localizado."  }})
     .then(data => {  return data.json()})
     .then(data => {
-      console.log(data.status)
        const newUser = {
         "login": data.login,
         "name": data.name,
@@ -43,7 +42,7 @@ class WorkWithData {
       this.allUser.filter(value => {
         if(value.login.toLowerCase() == checkUser) { this.userRepeat = true } 
       })
-      console.log(this.userRepeat)
+      
       this.userRepeat ? alert('Usuário já cadastrado.') : this.user(checkUser)
     }
 
@@ -66,11 +65,15 @@ export class UpdateApp extends WorkWithData {
   }
   
   constructorHTML() {
-    let locaStorageAllUser = localStorage.getItem('this.allUser')
-    console.log(this.allUser)
-    this.allUser = JSON.parse(locaStorageAllUser)
+    let localStorageAllUser = localStorage.getItem('this.allUser')
+    
+    
+    if(localStorageAllUser !== null) {
 
-    console.log(this.allUser)
+      this.allUser = JSON.parse(localStorageAllUser)
+    }
+
+    
     document.querySelector('tbody').textContent = ''
     
     this.allUser.forEach((newUser) => { 
