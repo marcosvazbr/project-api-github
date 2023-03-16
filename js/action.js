@@ -46,7 +46,7 @@ class WorkWithData {
       this.userRepeat ? alert('Usuário já cadastrado.') : this.user(checkUser)
     }
 
-  saveLocalSorage() 
+  saveLocalSorage() {
 
     localStorage.setItem('this.allUser', JSON.stringify(this.allUser))
   }
