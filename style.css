@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-color: #f1f2fc;
+}
+
+body {
+  background: black;
+}
+
+body * {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+#app {
+  width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.input-username input {
+  background: #06181C; 
+  width: 46.2rem;
+  height: 4.8rem;
+  border: none;
+  padding: 0 2rem;
+  border-radius: .4rem;
+}
+
+.input-username button {
+  width: 17rem;
+  height: 4.8rem;
+  background: #065E7C;
+  color: white;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+}
+
+.input-username button:hover {
+  filter: brightness(1.8);
+}
+
+
+.only-seo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 1.5px rgba(255, 255, 255, 0.137);
+}
+
+
+thead th {
+  background: #092D38;
+  height: 6.4rem;
+  padding-left: 4.4rem;
+}
+
+tbody td {
+  height: 10rem;
+  padding-left: 4.4rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #092D38;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #040e11;
+}
+
+tbody .user {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+tr {
+  box-shadow: 0px 0px 0px 1.5px rgba(255, 255, 255, 0.137);
+}
+
+tbody .user a {
+  text-decoration: none;
+}
+
+tbody .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+tbody .user a p {
+  font-weight: bold;
+}
+
+tbody .user a span {
+  font-size: 1.4rem;
+}
+
+.action span {
+  cursor: pointer;
+  color: rgb(253, 62, 62);
+}
+
+.action span:hover {
+  color: rgb(255, 0, 0);
+}
