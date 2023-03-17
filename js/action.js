@@ -80,10 +80,6 @@ export class UpdateApp extends WorkWithData {
     
     this.constructorTr = document.createElement("tr") 
 
-    if(window.innerWidth <= 700){
-      document.querySelector('#repo').innerText = 'repositories'
-      document.querySelector('#follow').innerText = 'Follower'
-    }
         this.constructorTr.innerHTML = `<td class="user">
       <img src="" alt="Imagem do usuario">
       <div>
