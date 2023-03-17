@@ -20,7 +20,7 @@ body * {
 }
 
 #app {
-  width: 1000px;
+  max-width: 1000px;
   margin: 4rem auto;
   padding: 2rem;
 }
@@ -40,7 +40,8 @@ header h1 {
 
 .input-username input {
   background: #06181C; 
-  width: 46.2rem;
+  width: 32rem;
+  
   height: 4.8rem;
   border: none;
   padding: 0 2rem;
@@ -134,4 +135,58 @@ tbody .user a span {
 
 .action span:hover {
   color: rgb(255, 0, 0);
+}
+
+@media (max-width: 700px) { 
+  body * {
+    font-size: 1.2rem;
+  }
+
+  #app {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0;
+  }
+
+  tbody td {
+    padding-left: 0.5rem;
+  }
+  thead th {
+    padding-left: 0.5rem;
+    text-align: center;
+  }
+
+  tbody .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  tbody td {
+    height: 12rem;
+    padding-left: 1.5rem;
+    text-align: center;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .input-username {
+    width: 50rem;
+    margin: auto;
+  }
+
+  .input-username input {
+    width: 20rem;
+  }
+
+  .input-username button {
+    width: 15rem;
+  }
 }

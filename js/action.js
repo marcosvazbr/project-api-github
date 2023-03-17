@@ -79,19 +79,25 @@ export class UpdateApp extends WorkWithData {
     this.allUser.forEach((newUser) => { 
     
     this.constructorTr = document.createElement("tr") 
-    this.constructorTr.innerHTML = `<td class="user">
-    <img src="" alt="Imagem do usuario">
-    <div>
-    <a target="_blank" href="">
-    <p></p>
-    <span></span>
-    </div>
-    </a>
-    </td>
-    <td class="repositories"></td>
-    <td class="followers"></td>
-    <td class="action"><span>Remover</span></td>`
 
+    if(window.innerWidth <= 700){
+      document.querySelector('#repo').innerText = 'repositories'
+      document.querySelector('#follow').innerText = 'Follower'
+    }
+        this.constructorTr.innerHTML = `<td class="user">
+      <img src="" alt="Imagem do usuario">
+      <div>
+      <a target="_blank" href="">
+      <p></p>
+      <span></span>
+      </div>
+      </a>
+      </td>
+      <td class="repositories"></td>
+      <td class="followers"></td>
+      <td class="action"><span> X</span></td>`
+    
+      
     this.constructorTr.querySelector('img').src = `https://github.com/${newUser.login}.png`
     this.constructorTr.querySelector('a').href = `https://github.com/${newUser.login}`
     this.constructorTr.querySelector('p').innerText = newUser['name']
